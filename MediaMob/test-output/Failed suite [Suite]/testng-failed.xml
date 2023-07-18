@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Suite]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)(failed)">
+    <classes>
+      <class name="Registration.ApproveMobberTest">
+        <methods>
+          <include name="Bm"/>
+          <include name="approveMobber"/>
+        </methods>
+      </class> <!-- Registration.ApproveMobberTest -->
+      <class name="Registration.SelectClientDropDown">
+        <methods>
+          <include name="Bm"/>
+          <include name="selectClient"/>
+        </methods>
+      </class> <!-- Registration.SelectClientDropDown -->
+      <class name="ClientCompany.CreateClientCompanyTest">
+        <methods>
+          <include name="Bm"/>
+          <include name="client"/>
+        </methods>
+      </class> <!-- ClientCompany.CreateClientCompanyTest -->
+      <class name="Registration.Accept_MobberProposal">
+        <methods>
+          <include name="Bm"/>
+          <include name="acceptProposal"/>
+        </methods>
+      </class> <!-- Registration.Accept_MobberProposal -->
+    </classes>
+  </test> <!-- Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->
