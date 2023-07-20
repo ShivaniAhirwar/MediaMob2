@@ -8,7 +8,7 @@ public class Test
 	 int test=7;
 	 int test1=45;
 	 
-	 
+	 System.out.println(test+ ++test1 + test++);
 	 
 }
  
