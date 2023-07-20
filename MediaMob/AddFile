@@ -1,0 +1,7 @@
+//Test 
+//I have used Testng tool for hybrid framework.
+// I have created one property file to handle common data.
+// I have used excel sheet to maintain test data.
+// POM calls for each n every webpage to keep address of all the elements at one place so that assessibility and reusability become easy.
+//Base class to have annotation. In which I have written test script to launch the browser and hit the url.
+//Listener class to take screenshot.
