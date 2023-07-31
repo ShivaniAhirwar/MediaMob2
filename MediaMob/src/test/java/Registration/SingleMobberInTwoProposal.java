@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import DynamicXpathResource.DynamicXpathResource;
 import Generic_Utilities.BaseClass;
 import Generic_Utilities.File_Utility;
 import Generic_Utilities.WebDriver_Utility;
@@ -121,28 +122,29 @@ public class SingleMobberInTwoProposal extends BaseClass
 
  	   projectPage.serviceList2.click();
     }  
-    js.executeScript("arguments[0].click()", projectPage.clickDatePicker2);
+    WebElement calender2 = driver.findElement(By.xpath("(//div[@class=\"ant-picker ant-picker-range projectdetail_datePicker__LgPno \"])[2]"));
+    js.executeScript("arguments[0].click()", calender2);
     Thread.sleep(3000);
-   // projectPage.calender2();
-    WebElement date1 = driver.findElement(By.xpath("(//div[@class=\"ant-picker-panels\"]//table)[5]/tbody//tr[3]/td[3]"));
-    WebElement date2 = driver.findElement(By.xpath("(//div[@class=\"ant-picker-panels\"]//table)[6]/tbody//tr[3]/td[3]"));
-    try {
-      WebDriverWait w=new WebDriverWait(driver, 10);
-      w.until(ExpectedConditions.elementToBeClickable(date1));
-      w.until(ExpectedConditions.elementToBeClickable(date2));
-    }
-    catch(NoSuchElementException e)
-    {
-    	   WebDriverWait w=new WebDriverWait(driver, 10);
-    	      w.until(ExpectedConditions.elementToBeClickable(date1));
-    	      w.until(ExpectedConditions.elementToBeClickable(date2));
-    }
-    ///
 
+    try {
+    	  projectPage.projectCalender();
+     
+    }
+    catch(ElementNotInteractableException e)
+    {
+    	  projectPage.projectCalender();
+    }
+    
     Thread.sleep(3000);    
     js.executeScript("arguments[0].click()", projectPage.clickProjectDatePicker);
     Thread.sleep(3000);
-    projectPage.projectCalender();
+
+    String date1="2023-07-29";
+    String date2="2023-08-12";
+driver.findElement(By.xpath("//table/tbody/tr[5]/td[@title='"+date1+"']")).click();
+Thread.sleep(3000);
+
+ driver.findElement(By.xpath("(//div[@class=\"ant-picker-panel\"])[2]/descendant::div/table/tbody/tr[2]/td[@title='"+date2+"']")).click();
 
     projectPage.ProjectBudget("676");
     try {
@@ -156,7 +158,8 @@ public class SingleMobberInTwoProposal extends BaseClass
     
    Thread.sleep(3000);
    js.executeScript("arguments[0].click()",projectPage.saveButton );
-   System.out.println("Created_Project_Name="+projectPage.createdProjectName.getText());
-     
+   DynamicXpathResource.project=projectPage.createdProjectName.getText();
+   System.out.println("Created_Project_Name="+DynamicXpathResource.project);
+  
    }
 }

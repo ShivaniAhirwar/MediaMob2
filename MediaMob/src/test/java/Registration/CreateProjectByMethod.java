@@ -29,7 +29,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 @Listeners(Generic_Utilities.ItestListner.class)
 public class CreateProjectByMethod extends BaseClass
 {
-     @Test(retryAnalyzer = RetryAnalyser.class)
+     @Test()
      public void projectCreation() throws Throwable
      {
     	 WebDriver_Utility webLib=new WebDriver_Utility();
@@ -47,7 +47,7 @@ public class CreateProjectByMethod extends BaseClass
 	      dash.createProjectButton();
 	      
 	      CreateProjectPage projectPage=new CreateProjectPage(driver);
-	      projectPage.projectName("Sample Project ");
+	      projectPage.projectName("Sample Project");
 		  Thread.sleep(5000);
 	      try {
 	      projectPage.clientNameDropDown();
@@ -114,5 +114,6 @@ public class CreateProjectByMethod extends BaseClass
       System.out.println("Created_Project_Name="+projectPage.createdProjectName.getText());
       Assert.assertEquals("Sample Project", projectPage.createdProjectName.getText());
       driver.quit();
+      
 	}
 }

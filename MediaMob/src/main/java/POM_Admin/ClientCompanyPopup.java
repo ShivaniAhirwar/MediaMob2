@@ -16,7 +16,7 @@ public class ClientCompanyPopup
    private WebElement clientNametextField;
    @FindBy(xpath="//input[@name=\"phoneNumber\"]")
    private WebElement phoneNumTextField;
-   @FindBy(xpath="//div[@class=\"CustomSelectTag_selectTagInbox__UPH68 \"]//label[text()='Users']")
+   @FindBy(xpath="//label[text()='Users']/../../..")
    private WebElement userDropDown;
    @FindBy(xpath="//ul[@class=\"CustomSelectTag_selectTagList___jik7\"]/li[contains(text(),'adminn adminn')]")
    private WebElement userList;
@@ -106,5 +106,8 @@ public void inputTextField()
 	postalCodeTextField.sendKeys("tawef3");
 	saveButton.click();
 }
-
+public void users()
+{
+	userDropDown.click();
+}
 }

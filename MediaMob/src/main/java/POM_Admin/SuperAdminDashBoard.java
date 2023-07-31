@@ -15,12 +15,18 @@ public class SuperAdminDashBoard
 	
 	@FindBy(xpath="//button[text()='Create New Project']")
 	  private WebElement createProjectButton;
+	
 	@FindBy(xpath="//table/tbody/tr[1]/td[3]")
     private WebElement statusDropDown;
     
     @FindBy(xpath="//span[@class=\"ant-dropdown-menu-title-content\"]/span[text()='In Review']")
-    private WebElement statusOption;
+    public WebElement ReviewStatusOption;
 
+    @FindBy(xpath="//span[@class=\"ant-dropdown-menu-title-content\"]/span[text()='In Progress']")
+    public WebElement CompleteStatusOption;
+    
+    @FindBy(xpath="//span[@class=\"ant-dropdown-menu-title-content\"]/span[text()='Completed']")
+    public WebElement ProgressStatusOption;
 
     @FindBy(xpath="//table/tbody/tr[1]/td[5]/descendant::span[@class=\"undefined icon-tableediticon\"]")
     private WebElement editIcon;
@@ -61,7 +67,17 @@ public class SuperAdminDashBoard
 		}
 
 		public WebElement getStatusOption() {
-			return statusOption;
+			return ReviewStatusOption;
+		}
+		
+		public WebElement getReviewStatusOption() {
+			return ReviewStatusOption;
+		}
+		public WebElement getCompleteStatusOption() {
+			return CompleteStatusOption;
+		}
+		public WebElement getProgressStatusOption() {
+			return ProgressStatusOption;
 		}
 		public WebElement getEditIcon() {
 			return editIcon;
@@ -96,7 +112,6 @@ public class SuperAdminDashBoard
 		    {
 	    	 
 	    	  statusDropDown.click();
-	    	  statusOption.click();
 		    
 		    }	 
    public void ClickEditIcon()

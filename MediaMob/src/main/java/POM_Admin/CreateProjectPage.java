@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -43,22 +44,22 @@ public class CreateProjectPage
     @FindBy(xpath="//div[@class=\"sun-editor\"]/descendant::span[text()=' Mobber brief details']/../child::div[contains(@class,'se-wrapper-inner')]")
     private WebElement mobberBriefDetails;
     
-    @FindBy(xpath="//div[@name=\"projectBrief.0.date\"]")
+    @FindBy(xpath="//div[@class=\"ant-picker ant-picker-range projectdetail_datePicker__LgPno \"]")
     public WebElement clickDatePicker;
    
-    @FindBy(xpath="//div[@name=\"date\"]")
+    @FindBy(xpath="//div[@class=\"ant-picker ant-picker-range projectdetail_datePicker__LgPno  \"]")
     public WebElement clickProjectDatePicker;
     
-   @FindBy(xpath="(//div[@class=\"ant-picker-body\"]//table/tbody/tr[5]//td[5])[1]")
+   @FindBy(xpath="(//div[@class=\"ant-picker-body\"]//table/tbody/tr[5]//td[7])[1]")
    private WebElement clickOnCalender;
    
    @FindBy(xpath="(//div[@class=\"ant-picker-body\"]//table/tbody/tr[5]//td[7])[2]")
    private WebElement selectDates;
    
-   @FindBy(xpath="(//div[@class=\"ant-picker-body\"]//table/tbody/tr[5]//td[5])[3]")
+   @FindBy(xpath="(//div[@class=\"ant-picker-body\"]//table/tbody/tr[5]//td[7])[3]")
    private WebElement clickOnProjectCalender;
    
-   @FindBy(xpath="(//div[@class=\"ant-picker-body\"]//table/tbody/tr[5]//td[7])[3]")
+   @FindBy(xpath="(//div[@class=\"ant-picker-body\"]//table/tbody/tr[6]//td[7])[3]")
    private WebElement selectProjectDates;
    
     @FindBy(xpath="//span[@class=\"ant-select-selection-search\"]/ancestor::div[@name=\"projectBrief.0.locationtype\"]")
@@ -202,18 +203,22 @@ public void projectCalender() throws Throwable
 }
 public void clientNameDropDown() throws Throwable
 {
-	String c="test client on dev";
+	String c="Test client on devvv";
 	clientDropDown.click();
+
 	Thread.sleep(3000);
+	
 	for(WebElement list:clientListDropDown)
 	{
+	
 		String clientname=list.getText();
 		if(clientname.equalsIgnoreCase(c))
 		{
 			list.click();
+		  
 			break;
 		}
-	}
+	}		
 }
 
 public void SelectlocationType() 
@@ -247,10 +252,10 @@ private WebElement mobberBriefDetails2;
 @FindBy(xpath="//div[@name=\"projectBrief.1.date\"]")
 public WebElement clickDatePicker2;
 
-@FindBy(xpath="(//div[@class=\"ant-picker-panels\"]//table)[5]/tbody//tr[3]/td[3]")
+@FindBy(xpath="(//div[@class=\"ant-picker-panels\"]//table)[5]/tbody//tr[5]/td[6]")
 private WebElement clickOnCalender2;
 
-@FindBy(xpath="(//div[@class=\"ant-picker-panels\"]//table)[6]/tbody//tr[3]/td[3]")
+@FindBy(xpath="(//div[@class=\"ant-picker-panels\"]//table)[6]/tbody//tr[5]/td[7]")
 private WebElement selectDates2;
 
 @FindBy(xpath="//span[@class=\"ant-select-selection-search\"]/ancestor::div[@name=\"projectBrief.1.locationtype\"]")
@@ -264,7 +269,6 @@ private WebElement selectServiceDropDown2;
 
 @FindBy(xpath="(//label[text()='Select Service']/../following-sibling::ul[@class=\"CustomSelectTag_selectTagList___jik7\"]/li[text()='Art & Craft'])[2]")
 public WebElement serviceList2;
-
 
 public WebElement getMobberBriefTextField2() {
 	return mobberBriefTextField2;

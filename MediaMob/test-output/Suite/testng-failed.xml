@@ -3,12 +3,24 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="MobberAccount.SubmitProposalTest">
+      <class name="ClientCompany.CreateClientCompanyTest">
         <methods>
           <include name="Bm"/>
-          <include name="proposalSubmit"/>
+          <include name="client"/>
         </methods>
-      </class> <!-- MobberAccount.SubmitProposalTest -->
+      </class> <!-- ClientCompany.CreateClientCompanyTest -->
+      <class name="Registration.SelectClientDropDown">
+        <methods>
+          <include name="Bm"/>
+          <include name="selectClient"/>
+        </methods>
+      </class> <!-- Registration.SelectClientDropDown -->
+      <class name="Registration.Accept_MobberProposal">
+        <methods>
+          <include name="Bm"/>
+          <include name="acceptProposal"/>
+        </methods>
+      </class> <!-- Registration.Accept_MobberProposal -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

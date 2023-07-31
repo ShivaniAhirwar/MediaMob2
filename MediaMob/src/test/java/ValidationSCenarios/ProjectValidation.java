@@ -40,6 +40,7 @@ public class ProjectValidation extends BaseClass
 	      Java_Utility javalib=new Java_Utility();
 	      int r = javalib.random();
 	      String ExceptedprojectName="Project creation"+r;
+	  
 	      projectPage.projectName(ExceptedprojectName);
 		  Thread.sleep(5000);
 	      try {
@@ -58,17 +59,21 @@ public class ProjectValidation extends BaseClass
 	      }
 	      projectPage.mobberBrief();
      Thread.sleep(5000);
+     WebElement locationDropDown = driver.findElement(By.name("projectBrief.0.locationtype"));
+     WebElement servicedropDown = driver.findElement(By.xpath("//label[text()='Select Service']/../../.."));
+     webLib.scrollByJavaScript(driver, servicedropDown);
+     
      
      try {
-	     driver.findElement(By.xpath("//input[@id=\"rc_select_2\"]/../../..")).click();
-     driver.findElement(By.xpath("((//div[text()='Remote'])[2]")).click();
+    	 locationDropDown.click();
+     driver.findElement(By.xpath("(//div[text()='Remote'])[2]")).click();
     
      }
      catch(ElementClickInterceptedException e)
      {
-      driver.findElement(By.xpath("//input[@id=\"rc_select_2\"]/../../..")).click();
+      driver.findElement(By.name("projectBrief.0.locationtype")).click();
       driver.findElement(By.xpath("(//div[text()='Remote'])[2]")).click();	
-       
+    
      }   
      Thread.sleep(5000);
     try {
@@ -95,7 +100,7 @@ public class ProjectValidation extends BaseClass
     projectPage.calender();
  
     Thread.sleep(3000);
-    WebElement ele1 = driver.findElement(By.xpath("//div[@name=\"date\"]/child::div[@class=\"ant-picker-input ant-picker-input-active\"]"));    
+    WebElement ele1 = driver.findElement(By.xpath("//div[@class=\"ant-picker ant-picker-range projectdetail_datePicker__LgPno  \"]"));    
     js.executeScript("arguments[0].click()", ele1);
     Thread.sleep(3000);
     projectPage.projectCalender();
@@ -121,10 +126,21 @@ public class ProjectValidation extends BaseClass
     Thread.sleep(3000);
     WebElement saveButton = driver.findElement(By.xpath("//button[text()='Save Project']"));
     js.executeScript("arguments[0].click()", saveButton);
+    Thread.sleep(4000);
+    try
+    {
+    driver.findElement(By.xpath("//span[@class=\"ant-breadcrumb-link\"]/a[text()='Projects']")).click();
+    }
+    catch(ElementClickInterceptedException e)
+    {
+   	 driver.findElement(By.xpath("//span[@class=\"ant-breadcrumb-link\"]/a[text()='Projects']")).click();
+    }	
     
-   WebElement projectName = driver.findElement(By.xpath("//table/tbody/tr[1]/td[1]/p[text()='PD Title']"));
+   WebElement projectName = driver.findElement(By.xpath("//table/tbody/tr[1]/td[1]"));
    String ActualprojectName = projectName.getText();
-   Assert.assertEquals(ExceptedprojectName, ActualprojectName);
+   System.out.println(ActualprojectName);
+   System.out.println(ExceptedprojectName);
+   Assert.assertEquals(ActualprojectName, ExceptedprojectName);
    if(ExceptedprojectName.equalsIgnoreCase(ActualprojectName))
    {
 	   System.out.println("Project created successfully");
@@ -134,6 +150,6 @@ public class ProjectValidation extends BaseClass
 	   System.out.println("Project created successfully");
    }
     driver.quit();	
-	}
+}
 	
 }

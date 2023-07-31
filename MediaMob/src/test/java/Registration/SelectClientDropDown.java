@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -38,6 +39,7 @@ public class SelectClientDropDown extends BaseClass
          WebElement element = driver.findElement(By.xpath("//span[text()='Pending Users']/../.."));
          Actions a=new Actions(driver);
          a.moveToElement(element).perform();
+         Thread.sleep(4000);
          element.click();
          driver.findElement(By.xpath("//div[text()='Approved Users']")).click();
          driver.findElement(By.xpath("(//div[text()='Select Client'])[1]")).click();
@@ -46,24 +48,23 @@ public class SelectClientDropDown extends BaseClass
         
      // WebElement spanElement = driver.findElement(By.xpath("//span[@class=\"projectdetail_tickedIcon__ONfWT\"]"));
         boolean spanChildIsPresent=false;
+        int var=1;
         for(WebElement client:ParentclientName)
          {
-        	   WebElement spanChild = client.findElement(By.xpath("//span[@class=\"projectdetail_tickedIcon__ONfWT\"]"));
         	
-        	 //  spanChildIsPresent=true;
-        	 if(spanChild.isSelected())
-        	 {
-        		 continue;
-        		
-        	 }
-        	 else
-        	 {
-        		 client.click();
-        		 System.out.println(client.getText());
-        		 break;
-        	 }
-        	  
+            	try {
+                  driver.findElement(By.xpath("//div[contains(@class,'ant-dropdown filterListWithCheck ')]/ul/li["+var+"]/descendant::span[@class=\"projectdetail_tickedIcon__ONfWT\"]"));
+            	  var++;
+                  continue;
+            	}       
+            	catch(NoSuchElementException n)
+            	{
+            		client.click();
+            		break;
+            	}
+              
          }
+ 
        driver.findElement(By.xpath("//button[text()='Continue']")).click();
          
      }

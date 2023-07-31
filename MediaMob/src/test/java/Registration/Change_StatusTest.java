@@ -2,6 +2,8 @@ package Registration;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Listeners;
@@ -34,8 +36,23 @@ public class Change_StatusTest extends BaseClass
     	 
     	 SuperAdminDashBoard dashboard=new SuperAdminDashBoard(driver);
     	  webLib.assertMethod();
-  
-    	  dashboard.changeStatus();   	
+    WebElement text = driver.findElement(By.xpath("(//div[@class=\"projectdetail_TableTag__JiY5f\"])[1]"));
+   String status = text.getText();  
+   System.out.println(status);
+dashboard.changeStatus(); 
+    	  Thread.sleep(3000);
+    	  if(status.equalsIgnoreCase("Completed"))
+    	  {
+    		driver.findElement(By.xpath("//span[@class=\"ant-dropdown-menu-title-content\"]/span[text()='In Progress']")).click();
+    	  }
+    	  else if(status.equalsIgnoreCase("In Progress"))
+    	  {
+    		  driver.findElement(By.xpath("//span[@class=\"ant-dropdown-menu-title-content\"]/span[text()='In Review']")).click();
+    	  }
+    	  else if(status.equalsIgnoreCase("In Review"))
+    	  {
+    		  driver.findElement(By.xpath("//span[@class=\"ant-dropdown-menu-title-content\"]/span[text()='Completed']")).click();
+    	  }
     	 Thread.sleep(5000);
     	 dashboard.logoOut();
     	 driver.quit();

@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ClientCompany.CreateClientCompanyTest">
+      <class name="Registration.DeleteProject">
         <methods>
           <include name="Bm"/>
-          <include name="client"/>
+          <include name="deleteProject"/>
         </methods>
-      </class> <!-- ClientCompany.CreateClientCompanyTest -->
+      </class> <!-- Registration.DeleteProject -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

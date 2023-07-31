@@ -16,7 +16,7 @@ import Generic_Utilities.BaseClass;
 import Generic_Utilities.File_Utility;
 import Generic_Utilities.Java_Utility;
 import Generic_Utilities.WebDriver_Utility;
-
+import POM_Admin.ClientCompanyPopup;
 import POM_Admin.LoginAsSuperAdmin;
 import POM_Admin.SuperAdminDashBoard;
 
@@ -37,10 +37,11 @@ public class CreateClientCompanyTest extends BaseClass
 	   login.loginSuperAdmin(email, Password);
         Java_Utility javaLib=new Java_Utility();
         int r = javaLib.random();
-        WebDriverWait wait=new WebDriverWait(driver,20);
+        WebDriverWait wait=new WebDriverWait(driver,10);
 	    SuperAdminDashBoard dashboard=new SuperAdminDashBoard(driver);
 	    dashboard.clickClientCompanyLink();
-	    Thread.sleep(3000);	 
+	    Thread.sleep(3000);
+	    
 	    WebElement ele = driver.findElement(By.xpath("//button[@class=\"ProjectListing_projectAddbtn__XffKW themeBtn ProjectListing_clientAddNewBtn__D6EBn \"]"));
 
 	    JavascriptExecutor js = (JavascriptExecutor) driver; 
@@ -48,28 +49,37 @@ public class CreateClientCompanyTest extends BaseClass
 	    String companyName="Client comes at top"+r;
 	   driver.findElement(By.xpath("//input[@name=\"companyName\"]")).sendKeys(companyName);
 	 
-	   driver.findElement(By.xpath("//input[@name=\"phoneNumber\"]")).sendKeys("6565657"+r); 
+	   driver.findElement(By.xpath("//input[@name=\"phoneNumber\"]")).sendKeys("65656857"+r); 
 	   Thread.sleep(5000);
 	   WebElement ele1 = driver.findElement(By.xpath("//label[text()='Users']/../../.."));
-	   WebElement userList = driver.findElement(By.xpath("(//label[text()='Users']/../following-sibling::ul[@class=\"CustomSelectTag_selectTagList___jik7\"]/li)[1]"));
+	   WebElement userList = driver.findElement(By.xpath("(//ul[@class=\"CustomSelectTag_selectTagList___jik7\"]/li)[1]"));
 	   WebElement clientdrop = driver.findElement(By.xpath("//label[text()='Client Users']/.."));	   
 	   WebElement clientList = driver.findElement(By.xpath("(//label[text()='Client Users']/../following-sibling::ul/li)[1]"));	  
 	   WebElement mobberdRopDown = driver.findElement(By.xpath("//label[text()='Mobbers']/.."));	  
 	   try {
-	   wait.until(ExpectedConditions.elementToBeClickable(ele1)).click();
+		   Thread.sleep(3000);
+	//	wait.until(ExpectedConditions.elementToBeClickable(ele1)).click();
 		  
-      Thread.sleep(3000);
-	   wait.until(ExpectedConditions.elementToBeClickable(userList)).click();
+
+	//   wait.until(ExpectedConditions.elementToBeClickable(userList)).click();
+      ClientCompanyPopup popup=new ClientCompanyPopup(driver);
+      popup.users();
+      ele1.click();
+      userList.click();
 	 	wait.until(ExpectedConditions.elementToBeClickable(clientdrop)).click();
 	 	wait.until(ExpectedConditions.elementToBeClickable(clientList)).click();
 	 	wait.until(ExpectedConditions.elementToBeClickable(mobberdRopDown)).click();
 	   }
 	   catch(StaleElementReferenceException s)
 	   {
-		   wait.until(ExpectedConditions.elementToBeClickable(ele1)).click();
-			  
 		      Thread.sleep(3000);
-			   wait.until(ExpectedConditions.elementToBeClickable(userList)).click();
+		//   wait.until(ExpectedConditions.elementToBeClickable(ele1)).click();
+		      ClientCompanyPopup popup=new ClientCompanyPopup(driver);
+		      popup.users();
+		      ele1.click();
+		      userList.click();
+		      Thread.sleep(3000);
+			  // wait.until(ExpectedConditions.elementToBeClickable(userList)).click();
 			 	wait.until(ExpectedConditions.elementToBeClickable(clientdrop)).click();
 			 	wait.until(ExpectedConditions.elementToBeClickable(clientList)).click();
 			 	wait.until(ExpectedConditions.elementToBeClickable(mobberdRopDown)).click();

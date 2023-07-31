@@ -30,6 +30,6 @@ public class EditClientCompany extends BaseClass{
     Thread.sleep(3000);
     driver.findElement(By.xpath("//table/tbody/tr[2]/td[6]//img[@src=\"/pen.svg\"]")).click();
     driver.findElement(By.xpath("//button[text()='Save']")).click();
-    
+    driver.quit();
 	}
 }

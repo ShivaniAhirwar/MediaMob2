@@ -1,5 +1,7 @@
 package POM_Admin;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,13 +14,13 @@ public class ProjectDelete
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="(//span[@class=\"undefined icon-tabledelicon \"])[1]")
-	private WebElement deleteButtonIcon;
+	@FindBy(xpath="//table/tbody/tr/td/p[@data-att=\"Project Name\"]")
+	public List<WebElement> deleteButtonIcon;
 
 	@FindBy(xpath="//button[text()='Delete']")
 	private WebElement deleteButton;
 	
-	public WebElement getDeleteButtonIcon() {
+	public List<WebElement> getDeleteButtonIcon() {
 		return deleteButtonIcon;
 	}
 
@@ -28,8 +30,6 @@ public class ProjectDelete
 	
 	public void deleteProject() throws Throwable
 	{
-		deleteButtonIcon.click();
-		Thread.sleep(3000);
 		deleteButton.click();
 		
 	}
