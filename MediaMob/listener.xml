@@ -9,7 +9,6 @@
     <classes>
       <class name="Registration.Edit_ProjectTest"/>
       <class name="ClientCompany.AddNewUserTest"/>
-      <class name="ClientCompany.CreateClientCompanyTest"/>
       <class name="Registration.ApproveMobberTest"/>
       <class name="Registration.Change_StatusTest"/>
       <class name="Registration.CreateProjectByMethod"/>

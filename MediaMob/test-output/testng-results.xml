@@ -1,21 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-28T18:30:28 IST" name="Default suite" finished-at="2023-07-28T18:30:46 IST" duration-ms="18448">
+  <suite started-at="2023-08-07T12:29:11 IST" name="Default suite" finished-at="2023-08-07T12:30:40 IST" duration-ms="89647">
     <groups>
     </groups>
-    <test started-at="2023-07-28T18:30:28 IST" name="Default test" finished-at="2023-07-28T18:30:46 IST" duration-ms="18448">
-      <class name="Registration.DeleteProject">
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Registration.DeleteProject@483f6d77]" started-at="2023-07-28T18:30:28 IST" name="Bm" finished-at="2023-07-28T18:30:35 IST" duration-ms="6929" status="PASS">
+    <test started-at="2023-08-07T12:29:11 IST" name="Default test" finished-at="2023-08-07T12:30:40 IST" duration-ms="89647">
+      <class name="MobberAccount.RemoveNUpdateMobberProfilePicTest">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:MobberAccount.RemoveNUpdateMobberProfilePicTest@483f6d77]" started-at="2023-08-07T12:29:11 IST" name="Bm" finished-at="2023-08-07T12:30:40 IST" duration-ms="89496" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="deleteProject()[pri:0, instance:Registration.DeleteProject@483f6d77]" started-at="2023-07-28T18:30:35 IST" name="deleteProject" finished-at="2023-07-28T18:30:46 IST" duration-ms="11464" status="PASS">
+        <test-method signature="UpdateProfilePic()[pri:1, instance:MobberAccount.RemoveNUpdateMobberProfilePicTest@483f6d77]" started-at="2023-08-07T12:30:40 IST" name="UpdateProfilePic" finished-at="2023-08-07T12:30:40 IST" duration-ms="65" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=115.0.5790.114)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Pros-MacBook-Pro-2.local', ip: 'fe80:0:0:0:465:dd41:ea2b:42c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6.7', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:64861}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cb1f3540b6696ef4c28b1511252b2d59]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=115.0.5790.114)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Pros-MacBook-Pro-2.local', ip: 'fe80:0:0:0:465:dd41:ea2b:42c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6.7', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:64861}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cb1f3540b6696ef4c28b1511252b2d59
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
+at Generic_Utilities.WebDriver_Utility.maximizeScreen(WebDriver_Utility.java:33)
+at MobberAccount.RemoveNUpdateMobberProfilePicTest.UpdateProfilePic(RemoveNUpdateMobberProfilePicTest.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteProject -->
-      </class> <!-- Registration.DeleteProject -->
+        </test-method> <!-- UpdateProfilePic -->
+        <test-method signature="removeProfile()[pri:2, instance:MobberAccount.RemoveNUpdateMobberProfilePicTest@483f6d77]" started-at="2023-08-07T12:30:40 IST" name="removeProfile" finished-at="2023-08-07T12:30:40 IST" depends-on-methods="MobberAccount.RemoveNUpdateMobberProfilePicTest.UpdateProfilePic" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method RemoveNUpdateMobberProfilePicTest.removeProfile()[pri:2, instance:MobberAccount.RemoveNUpdateMobberProfilePicTest@483f6d77] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method RemoveNUpdateMobberProfilePicTest.removeProfile()[pri:2, instance:MobberAccount.RemoveNUpdateMobberProfilePicTest@483f6d77] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeProfile -->
+      </class> <!-- MobberAccount.RemoveNUpdateMobberProfilePicTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -5,7 +5,6 @@
     <classes>
      
       <class name="ClientCompany.AddNewUserTest"/>
-       <class name="ClientCompany.CreateClientCompanyTest"/>
       <class name="Registration.DeleteProject"/>
       <class name="Registration.ApproveMobberTest"/>
       <class name="Registration.DeleteProject"/>

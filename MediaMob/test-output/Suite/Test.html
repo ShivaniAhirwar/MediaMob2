@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jul 21 15:40:18 IST 2023</td>
+<td>Started on:</td><td>Fri Aug 04 16:47:02 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>230 seconds (230536 ms)</td>
+<tr><td>Total time:</td><td>316 seconds (316469 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,87 +75,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Registration.SelectClientDropDown.selectClient()'><b>selectClient</b><br>Test class: Registration.SelectClientDropDown</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class=&quot;ant-select ant-select-single ant-select-show-arrow&quot;&gt;...&lt;/div&gt; is not clickable at point (1111, 277). Other element would receive the click: &lt;html lang=&quot;en&quot; style=&quot;&quot;&gt;...&lt;/html&gt;
-  (Session info: chrome=115.0.5790.102)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Pros-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:428:6fff:b558:2311%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.5&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.102, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:60109}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ddbd3b0e48799f85b4b229d718f6dcbc
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at Registration.SelectClientDropDown.selectClient(SelectClientDropDown.java:41)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace177279387", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace177279387'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class=&quot;ant-select ant-select-single ant-select-show-arrow&quot;&gt;...&lt;/div&gt; is not clickable at point (1111, 277). Other element would receive the click: &lt;html lang=&quot;en&quot; style=&quot;&quot;&gt;...&lt;/html&gt;
-  (Session info: chrome=115.0.5790.102)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Pros-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:428:6fff:b558:2311%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.5&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.102, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:60109}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ddbd3b0e48799f85b4b229d718f6dcbc
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at Registration.SelectClientDropDown.selectClient(SelectClientDropDown.java:41)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>11</td>
-<td>Registration.SelectClientDropDown@593aaf41</td></tr>
-<tr>
 <td title='Registration.Accept_MobberProposal.acceptProposal()'><b>acceptProposal</b><br>Test class: Registration.Accept_MobberProposal</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@data-att=&quot;name&quot;])[2]&quot;}
-  (Session info: chrome=115.0.5790.102)
+  (Session info: chrome=115.0.5790.114)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Pros-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:428:6fff:b558:2311%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;Pros-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:f5:7a1b:ddd6:6081%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.102, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:60153}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 69f6dce35fc376c494f8653b2e0df4a7
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:64344}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ae0dfdabbead1a2d251026f93c77cbd
 *** Element info: {Using=xpath, value=(//div[@data-att=&quot;name&quot;])[2]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -169,15 +97,15 @@ Session ID: 69f6dce35fc376c494f8653b2e0df4a7
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at Registration.Accept_MobberProposal.acceptProposal(Accept_MobberProposal.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace673992096", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace673992096'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@data-att=&quot;name&quot;])[2]&quot;}
-  (Session info: chrome=115.0.5790.102)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace89772444", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace89772444'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@data-att=&quot;name&quot;])[2]&quot;}
+  (Session info: chrome=115.0.5790.114)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Pros-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:428:6fff:b558:2311%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;Pros-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:f5:7a1b:ddd6:6081%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.102, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:60153}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 69f6dce35fc376c494f8653b2e0df4a7
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:64344}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ae0dfdabbead1a2d251026f93c77cbd
 *** Element info: {Using=xpath, value=(//div[@data-att=&quot;name&quot;])[2]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
@@ -225,36 +153,40 @@ Session ID: 69f6dce35fc376c494f8653b2e0df4a7
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>19</td>
-<td>Registration.Accept_MobberProposal@57cf54e1</td></tr>
+<td>Registration.Accept_MobberProposal@5a56cdac</td></tr>
 <tr>
-<td title='ClientCompany.CreateClientCompanyTest.client()'><b>client</b><br>Test class: ClientCompany.CreateClientCompanyTest</td>
-<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=115.0.5790.102)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+<td title='Registration.DeleteProject.deleteProject()'><b>deleteProject</b><br>Test class: Registration.DeleteProject</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table/tbody/tr/td/p[text()=&apos;PT&apos;]/ancestor::tr/td/descendant::span[@class=&quot;undefined icon-tabledelicon &quot;]&quot;}
+  (Session info: chrome=115.0.5790.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Pros-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:428:6fff:b558:2311%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;Pros-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:f5:7a1b:ddd6:6081%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.102, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:59951}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e4ec29f35339240312078b531df81dc
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:63338}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 985137146b82960fa0071a5d1b4a5441
+*** Element info: {Using=xpath, value=//table/tbody/tr/td/p[text()=&apos;PT&apos;]/ancestor::tr/td/descendant::span[@class=&quot;undefined icon-tabledelicon &quot;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at ClientCompany.CreateClientCompanyTest.client(CreateClientCompanyTest.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at Registration.DeleteProject.deleteProject(DeleteProject.java:51)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1217347025", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1217347025'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=115.0.5790.102)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace550351186", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace550351186'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table/tbody/tr/td/p[text()=&apos;PT&apos;]/ancestor::tr/td/descendant::span[@class=&quot;undefined icon-tabledelicon &quot;]&quot;}
+  (Session info: chrome=115.0.5790.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Pros-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:428:6fff:b558:2311%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;Pros-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:f5:7a1b:ddd6:6081%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.7&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.102, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:59951}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e4ec29f35339240312078b531df81dc
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:63338}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 985137146b82960fa0071a5d1b4a5441
+*** Element info: {Using=xpath, value=//table/tbody/tr/td/p[text()=&apos;PT&apos;]/ancestor::tr/td/descendant::span[@class=&quot;undefined icon-tabledelicon &quot;]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -266,9 +198,11 @@ Session ID: 3e4ec29f35339240312078b531df81dc
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at ClientCompany.CreateClientCompanyTest.client(CreateClientCompanyTest.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at Registration.DeleteProject.deleteProject(DeleteProject.java:51)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -298,8 +232,8 @@ Session ID: 3e4ec29f35339240312078b531df81dc
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>19</td>
-<td>ClientCompany.CreateClientCompanyTest@5d0a1059</td></tr>
+<td>124</td>
+<td>Registration.DeleteProject@485966cc</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -309,35 +243,35 @@ Session ID: 3e4ec29f35339240312078b531df81dc
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='Registration.SelectClientDropDown.selectClient()'><b>selectClient</b><br>Test class: Registration.SelectClientDropDown</td>
+<td></td>
+<td>25</td>
+<td>Registration.SelectClientDropDown@593aaf41</td></tr>
+<tr>
 <td title='Registration.Change_StatusTest.changeStatus()'><b>changeStatus</b><br>Test class: Registration.Change_StatusTest</td>
 <td></td>
-<td>11</td>
+<td>13</td>
 <td>Registration.Change_StatusTest@5b03b9fe</td></tr>
-<tr>
-<td title='Registration.ApproveMobberTest.approveMobber()'><b>approveMobber</b><br>Test class: Registration.ApproveMobberTest</td>
-<td></td>
-<td>19</td>
-<td>Registration.ApproveMobberTest@1de76cc7</td></tr>
 <tr>
 <td title='Registration.Edit_ProjectTest.edit()'><b>edit</b><br>Test class: Registration.Edit_ProjectTest</td>
 <td></td>
-<td>18</td>
+<td>19</td>
 <td>Registration.Edit_ProjectTest@54bff557</td></tr>
 <tr>
-<td title='ClientCompany.AddNewUserTest.newAdmin()'><b>newAdmin</b><br>Test class: ClientCompany.AddNewUserTest</td>
+<td title='Registration.ApproveMobberTest.approveMobber()'><b>approveMobber</b><br>Test class: Registration.ApproveMobberTest</td>
 <td></td>
-<td>21</td>
-<td>ClientCompany.AddNewUserTest@3d6f0054</td></tr>
+<td>18</td>
+<td>Registration.ApproveMobberTest@1de76cc7</td></tr>
 <tr>
 <td title='ClientCompany.AddNewUserTest.addNewUser()'><b>addNewUser</b><br>Test class: ClientCompany.AddNewUserTest</td>
 <td></td>
 <td>22</td>
-<td>ClientCompany.AddNewUserTest@3d6f0054</td></tr>
+<td>ClientCompany.AddNewUserTest@505fc5a4</td></tr>
 <tr>
-<td title='Registration.DeleteProject.deleteProject()'><b>deleteProject</b><br>Test class: Registration.DeleteProject</td>
+<td title='ClientCompany.AddNewUserTest.newAdmin()'><b>newAdmin</b><br>Test class: ClientCompany.AddNewUserTest</td>
 <td></td>
-<td>8</td>
-<td>Registration.DeleteProject@485966cc</td></tr>
+<td>21</td>
+<td>ClientCompany.AddNewUserTest@505fc5a4</td></tr>
 </table><p>
 </body>
 </html>

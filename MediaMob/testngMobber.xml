@@ -7,6 +7,9 @@
       <class name="MobberAccount.DeclineProjectTest"/>
       <class name="MobberAccount.SubmitProposalTest"/>
       <class name="MobberAccount.EditProfile"/>
+      <class name="MobberAccount.EditPortfolio"/>
+      <class name="MobberAccount.OnBoarding"/>
+      <class name="MobberAccount.RemoveNUpdateMobberProfilePic"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

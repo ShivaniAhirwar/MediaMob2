@@ -3,6 +3,11 @@ package MobberAccount;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import DynamicXpathResource.DynamicXpathResource;
+
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -22,11 +27,11 @@ public class DeclineProjectTest  extends BaseClass
      @Test
      public void delineProject() throws Throwable
      {
-    	File_Utility filLib=new File_Utility();
+    	 File_Utility filLib=new File_Utility();
  	    String url = filLib.getCommonData("URL");
  	    String email = filLib.getCommonData("Email");
  	    String Password = filLib.getCommonData("Password");
-   	 driver.get(url);
+  	 driver.get(url);
 
  	    WebDriver_Utility weblib=new WebDriver_Utility();
  	    weblib.implicitlywait(driver);
@@ -42,13 +47,29 @@ public class DeclineProjectTest  extends BaseClass
  	    catch(NoSuchElementException n)
  	    {
  	    	System.out.println("Projects are assigned");
- 	    WebElement projectName = driver.findElement(By.xpath("//table/tbody/tr[1]/td[2]"));
- 	    JavascriptExecutor js=(JavascriptExecutor) driver;
- 	    js.executeScript("arguments[0].scrollIntoView(true)", projectName);
+ 	    List<WebElement> projectName = driver.findElements(By.xpath("//span[@class=\"ant-tag ant-tag-volcano offerTablesecond_offerwaringTagOutter__OyxaI\"]"
+ 	    		+ "/p[text()='In Progress']/ancestor::tr/td[2]/p[text()='"+DynamicXpathResource.DeclineProjectByMobber+"']"));
+// 	    JavascriptExecutor js=(JavascriptExecutor) driver;
+// 	    js.executeScript("arguments[0].scrollIntoView(true)", projectName);
+ 	    
+ 	    for(WebElement e:projectName)
+ 	    {
+ 	    	String project1 = e.getText();
+ 	    	System.out.println(project1);
+ 	    	if(project1.equalsIgnoreCase(DynamicXpathResource.DeclineProjectByMobber))
+ 	    	{
+ 	    		Thread.sleep(3000);	
+ 	    		JavascriptExecutor js=(JavascriptExecutor) driver;
+ 	    	    js.executeScript("arguments[0].scrollIntoView(true)", e);
+ 	    	    Thread.sleep(3000);
+ 	    	    e.click();
+ 	    		break;
+ 	    	}
+ 	    }
  	    
  	    Thread.sleep(3000);
- 	    projectName.click();
- 
+ 	   
+
  	    driver.findElement(By.xpath("//button[text()='Decline']")).click();
  	    driver.findElement(By.xpath("//button[text()='Submit']")).click();
  	    }

@@ -19,7 +19,7 @@ public class MobberDashboard
     @FindBy(xpath="//a[text()='Logout']")
     private WebElement logoutLink;
     
-    @FindBy(xpath="//a[text()='My Profile']")
+    @FindBy(xpath="//span[@class=\"NavDropdown_userdropdownIcon__6x_V1\"]/span[@class=\" icon-setting-profile\"]")
     private WebElement myProfileLink;
     
     public WebElement getMyProfileLink() {
