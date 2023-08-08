@@ -6,7 +6,7 @@
       <class name="Registration.Accept_MobberProposalTest">
         <methods>
           <include name="Bm"/>
-          <include name="acceptProposal"/>
+          <include name="removeMobberFromTeam"/>
         </methods>
       </class> <!-- Registration.Accept_MobberProposalTest -->
     </classes>

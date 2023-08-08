@@ -20,6 +20,7 @@ import Generic_Utilities.File_Utility;
 import Generic_Utilities.WebDriver_Utility;
 import POM_Admin.LoginAsSuperAdmin;
 import POM_Admin.ProjectDelete;
+import POM_Admin.TeamTab;
 import POM_Mobber.LoginAsMobber;
 import POM_Mobber.MobberDashboard;
 
@@ -89,9 +90,13 @@ public class Accept_MobberProposalTest extends BaseClass
    String offer="Submitted Offer";
    
   driver.findElement(By.xpath("//table/tbody/tr[1]/td[1]/button")).click();
-  driver.findElement(By.xpath("(//table/tbody/tr/td/button)[2]")).click();
-  Thread.sleep(3000);
-  List<WebElement> proposalStatus = driver.findElements(By.xpath("//td/p[@data-att=\"status\"]"));
+  Thread.sleep(2000);
+  WebElement openProposal = driver.findElement(By.xpath("(//table/tbody/tr/td/button[@type=\"button\"])[2]"));
+  webLib.scrollByJavaScript(driver, openProposal);
+  Thread.sleep(2000);
+  openProposal.click();
+  Thread.sleep(2000);
+  List<WebElement> proposalStatus = driver.findElements(By.xpath("//table/tbody/tr/td/p[@data-att=\"status\"]"));
  for(WebElement s:proposalStatus)
  {
 	 System.out.println(s.getText());
@@ -99,8 +104,9 @@ public class Accept_MobberProposalTest extends BaseClass
   {
 	  s.click();
   }
-   Thread.sleep(3000);
+   
  }
+ Thread.sleep(3000);
    WebElement acceptButton = driver.findElement(By.xpath("//button[text()='Accept']"));
    JavascriptExecutor js=(JavascriptExecutor) driver;
    js.executeScript("arguments[0].click()", acceptButton);
@@ -130,7 +136,7 @@ public class Accept_MobberProposalTest extends BaseClass
 	    	logout.logOut();
 	    }
     }
-	@Test(priority=1)
+	@Test(priority=3)
 	public void removeMobberFromTeam() throws Throwable
 	{
 		CallUser.callSuperAdmin();
@@ -140,7 +146,16 @@ public class Accept_MobberProposalTest extends BaseClass
 		  WebElement proposalTab = driver.findElement(By.xpath("//a[text()='Team']"));
 		   webLib.scrollByJavaScript(driver, proposalTab);
 		   Thread.sleep(3000);
-		   proposalTab.click();   
-   
+		   proposalTab.click();  
+		   TeamTab teamTab=new TeamTab(driver);
+		   teamTab.openDropdown();
+driver.findElement(By.xpath("//span[@class=\"ant-dropdown-menu-title-content\"]/p[text()='View Profile ']")).click();
+
+Thread.sleep(7000);
+driver.navigate().back();
+teamTab.openDropdown();
+driver.findElement(By.xpath("//span[@class=\"ant-dropdown-menu-title-content\"]/p[text()='Remove ']")).click();		   
+driver.findElement(By.xpath("//button[text()='Continue']")).click();
+
 	}
 }
