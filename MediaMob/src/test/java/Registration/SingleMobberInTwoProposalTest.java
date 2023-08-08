@@ -23,7 +23,7 @@ import POM_Admin.SuperAdminDashBoard;
 
 public class SingleMobberInTwoProposalTest extends BaseClass
 {
-   @Test(retryAnalyzer=Generic_Utilities.RetryAnalyser.class)
+   @Test(retryAnalyzer=Generic_Utilities.RetryAnalyser.class, invocationCount=3)
    public void singleMobber() throws Throwable
    {
   	 WebDriver_Utility webLib=new WebDriver_Utility();
@@ -157,8 +157,6 @@ Thread.sleep(3000);
     
    Thread.sleep(3000);
    js.executeScript("arguments[0].click()",projectPage.saveButton );
-   DynamicXpathResource.Deleteproject=projectPage.createdProjectName.getText();
-   System.out.println("Created_Project_Name="+DynamicXpathResource.Deleteproject);
   
    }
 }

@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="1" skipped="1">
+<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-07T12:29:11 IST" name="Default suite" finished-at="2023-08-07T12:30:40 IST" duration-ms="89647">
+  <suite started-at="2023-08-08T14:39:23 IST" name="Default suite" finished-at="2023-08-08T14:40:06 IST" duration-ms="42604">
     <groups>
     </groups>
-    <test started-at="2023-08-07T12:29:11 IST" name="Default test" finished-at="2023-08-07T12:30:40 IST" duration-ms="89647">
-      <class name="MobberAccount.RemoveNUpdateMobberProfilePicTest">
-        <test-method is-config="true" signature="Bm()[pri:0, instance:MobberAccount.RemoveNUpdateMobberProfilePicTest@483f6d77]" started-at="2023-08-07T12:29:11 IST" name="Bm" finished-at="2023-08-07T12:30:40 IST" duration-ms="89496" status="PASS">
+    <test started-at="2023-08-08T14:39:23 IST" name="Default test" finished-at="2023-08-08T14:40:06 IST" duration-ms="42604">
+      <class name="Registration.Accept_MobberProposalTest">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Registration.Accept_MobberProposalTest@76c3e77a]" started-at="2023-08-08T14:39:23 IST" name="Bm" finished-at="2023-08-08T14:39:37 IST" duration-ms="13969" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="UpdateProfilePic()[pri:1, instance:MobberAccount.RemoveNUpdateMobberProfilePicTest@483f6d77]" started-at="2023-08-07T12:30:40 IST" name="UpdateProfilePic" finished-at="2023-08-07T12:30:40 IST" duration-ms="65" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+        <test-method signature="acceptProposal()[pri:2, instance:Registration.Accept_MobberProposalTest@76c3e77a]" started-at="2023-08-08T14:39:37 IST" name="acceptProposal" finished-at="2023-08-08T14:40:06 IST" duration-ms="28281" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.114)
+              <![CDATA[element click intercepted: Element is not clickable at point (389, 603)
+  (Session info: chrome=115.0.5790.170)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Pros-MacBook-Pro-2.local', ip: 'fe80:0:0:0:465:dd41:ea2b:42c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6.7', java.version: '17.0.5'
+System info: host: 'Pros-MacBook-Pro-2.local', ip: 'fe80:0:0:0:878:3a01:a153:9c3f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6.7', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:64861}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: cb1f3540b6696ef4c28b1511252b2d59]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.170, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:50362}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4352032fe6edf2662fc82c12729b0c7f]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.114)
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (389, 603)
+  (Session info: chrome=115.0.5790.170)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Pros-MacBook-Pro-2.local', ip: 'fe80:0:0:0:465:dd41:ea2b:42c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6.7', java.version: '17.0.5'
+System info: host: 'Pros-MacBook-Pro-2.local', ip: 'fe80:0:0:0:878:3a01:a153:9c3f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6.7', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.114, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:64861}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: cb1f3540b6696ef4c28b1511252b2d59
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.170, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/_g/pm5y5vcj459...}, goog:chromeOptions: {debuggerAddress: localhost:50362}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4352032fe6edf2662fc82c12729b0c7f
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -43,10 +41,9 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
-at Generic_Utilities.WebDriver_Utility.maximizeScreen(WebDriver_Utility.java:33)
-at MobberAccount.RemoveNUpdateMobberProfilePicTest.UpdateProfilePic(RemoveNUpdateMobberProfilePicTest.java:27)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at Registration.Accept_MobberProposalTest.acceptProposal(Accept_MobberProposalTest.java:92)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -77,43 +74,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UpdateProfilePic -->
-        <test-method signature="removeProfile()[pri:2, instance:MobberAccount.RemoveNUpdateMobberProfilePicTest@483f6d77]" started-at="2023-08-07T12:30:40 IST" name="removeProfile" finished-at="2023-08-07T12:30:40 IST" depends-on-methods="MobberAccount.RemoveNUpdateMobberProfilePicTest.UpdateProfilePic" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method RemoveNUpdateMobberProfilePicTest.removeProfile()[pri:2, instance:MobberAccount.RemoveNUpdateMobberProfilePicTest@483f6d77] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method RemoveNUpdateMobberProfilePicTest.removeProfile()[pri:2, instance:MobberAccount.RemoveNUpdateMobberProfilePicTest@483f6d77] depends on not successfully finished methods
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- removeProfile -->
-      </class> <!-- MobberAccount.RemoveNUpdateMobberProfilePicTest -->
+        </test-method> <!-- acceptProposal -->
+      </class> <!-- Registration.Accept_MobberProposalTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

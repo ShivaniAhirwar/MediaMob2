@@ -22,7 +22,7 @@ import POM_Admin.ProjectDelete;
 @Listeners(Generic_Utilities.ItestListner.class)
 public class DeleteProjectTest extends BaseClass
 {
-	@Test
+	@Test()
     public void deleteProject() throws Throwable
     {
 		 WebDriver_Utility webLib=new WebDriver_Utility();
@@ -40,15 +40,17 @@ public class DeleteProjectTest extends BaseClass
 
  	ProjectDelete ProjectDelete=new ProjectDelete(driver);
  	 boolean flag=true;
-     
+ 	Thread.sleep(4000);
+ 	List<WebElement> str = ProjectDelete.deleteButtonIcon;
  	  while(flag) {
- 	   for(WebElement pro:ProjectDelete.deleteButtonIcon)
+ 	   for(WebElement pro:str)
  	   {
  		  String project = pro.getText();
+ 		  System.out.println(project);
+ 		  System.out.println("Project to delete="+DynamicXpathResource.Deleteproject);
  		  if(project.equalsIgnoreCase(DynamicXpathResource.Deleteproject))
  		  {
- 			    Thread.sleep(2000);
- 			 WebElement projectToDelete = driver.findElement(By.xpath("//table/tbody/tr/td/p[text()='"+DynamicXpathResource.Deleteproject+"']/ancestor::tr/td/descendant::span[@class=\"undefined icon-tabledelicon \"]"));
+ 			 WebElement projectToDelete = driver.findElement(By.xpath("//table/tbody/tr/td/p[normalize-space()='"+DynamicXpathResource.Deleteproject+"']/ancestor::tr/td/descendant::span[@class=\"undefined icon-tabledelicon \"]"));
  			 webLib.scrollByJavaScript(driver, projectToDelete);
  			Thread.sleep(3000);
  			 projectToDelete.click();
@@ -56,8 +58,9 @@ public class DeleteProjectTest extends BaseClass
  	         ProjectDelete.deleteProject();
  			  flag=false;
  			  break;
- 		  }
- 	    }
+ 		  }	   
+ 	      }
+ 	    
  	   if(flag)
  	   {
  		   try {
@@ -78,8 +81,9 @@ public class DeleteProjectTest extends BaseClass
  			  }
  		   }
  		}
- }
+ 	  }
  	  Thread.sleep(3000);
          driver.quit();
     }
+
 }

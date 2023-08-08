@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MobberAccount.RemoveNUpdateMobberProfilePicTest">
+      <class name="Registration.Accept_MobberProposalTest">
         <methods>
           <include name="Bm"/>
-          <include name="removeProfile"/>
-          <include name="UpdateProfilePic"/>
+          <include name="acceptProposal"/>
         </methods>
-      </class> <!-- MobberAccount.RemoveNUpdateMobberProfilePicTest -->
+      </class> <!-- Registration.Accept_MobberProposalTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

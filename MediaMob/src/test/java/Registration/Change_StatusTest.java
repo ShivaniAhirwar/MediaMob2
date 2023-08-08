@@ -19,7 +19,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 @Listeners(Generic_Utilities.ItestListner.class)
 public class Change_StatusTest extends BaseClass
 {
-	  @Test()
+	  @Test(invocationCount=3)
       public void changeStatus() throws Throwable
       {    	  
 		  WebDriver_Utility webLib=new WebDriver_Utility();
