@@ -1,37 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-08T16:23:43 IST" name="Default suite" finished-at="2023-08-08T16:25:45 IST" duration-ms="122102">
+  <suite started-at="2023-08-10T10:14:41 IST" name="Default suite" finished-at="2023-08-10T10:15:13 IST" duration-ms="32011">
     <groups>
     </groups>
-    <test started-at="2023-08-08T16:23:43 IST" name="Default test" finished-at="2023-08-08T16:25:45 IST" duration-ms="122102">
-      <class name="Registration.Accept_MobberProposalTest">
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Registration.Accept_MobberProposalTest@1b1426f4]" started-at="2023-08-08T16:23:43 IST" name="Bm" finished-at="2023-08-08T16:23:51 IST" duration-ms="8205" status="PASS">
+    <test started-at="2023-08-10T10:14:41 IST" name="Default test" finished-at="2023-08-10T10:15:13 IST" duration-ms="32011">
+      <class name="Registration.ApproveMobberTest">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Registration.ApproveMobberTest@6d4e5011]" started-at="2023-08-10T10:14:41 IST" name="Bm" finished-at="2023-08-10T10:14:50 IST" duration-ms="9209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="proposalSubmit()[pri:1, instance:Registration.Accept_MobberProposalTest@1b1426f4]" started-at="2023-08-08T16:23:51 IST" name="proposalSubmit" finished-at="2023-08-08T16:24:14 IST" duration-ms="22453" status="PASS">
+        <test-method signature="approveMobber()[pri:0, instance:Registration.ApproveMobberTest@6d4e5011]" started-at="2023-08-10T10:14:50 IST" name="approveMobber" finished-at="2023-08-10T10:15:13 IST" duration-ms="22740" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- proposalSubmit -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Registration.Accept_MobberProposalTest@1b1426f4]" started-at="2023-08-08T16:24:14 IST" name="Bm" finished-at="2023-08-08T16:24:22 IST" duration-ms="8137" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="acceptProposal()[pri:2, instance:Registration.Accept_MobberProposalTest@1b1426f4]" started-at="2023-08-08T16:24:22 IST" name="acceptProposal" finished-at="2023-08-08T16:25:00 IST" duration-ms="38215" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- acceptProposal -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Registration.Accept_MobberProposalTest@1b1426f4]" started-at="2023-08-08T16:25:00 IST" name="Bm" finished-at="2023-08-08T16:25:08 IST" duration-ms="8494" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="removeMobberFromTeam()[pri:3, instance:Registration.Accept_MobberProposalTest@1b1426f4]" started-at="2023-08-08T16:25:08 IST" name="removeMobberFromTeam" finished-at="2023-08-08T16:25:45 IST" duration-ms="36518" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- removeMobberFromTeam -->
-      </class> <!-- Registration.Accept_MobberProposalTest -->
+        </test-method> <!-- approveMobber -->
+      </class> <!-- Registration.ApproveMobberTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

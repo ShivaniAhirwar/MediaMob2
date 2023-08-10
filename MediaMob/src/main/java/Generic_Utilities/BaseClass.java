@@ -20,6 +20,7 @@ public class BaseClass
    @BeforeMethod
    public void Bm() throws Throwable
    {
+       WebDriver_Utility webLib=new WebDriver_Utility();
 	   String Browser = fileLib.getCommonData("Browser");  
 	   if(Browser.equalsIgnoreCase("chrome"))
 	   {
@@ -28,6 +29,8 @@ public class BaseClass
 	     File_Utility fileLib=new File_Utility();   
 	     String url = fileLib.getCommonData("URL");
 	     driver.get(url);
+	     webLib.implicitlywait(driver);
+	     webLib.maximizeScreen(driver);
 	   }
 	   else if(Browser.equalsIgnoreCase("firefox"))
 	   {
@@ -36,6 +39,8 @@ public class BaseClass
 		     File_Utility fileLib=new File_Utility();   
 		     String url = fileLib.getCommonData("URL");
 		     driver.get(url);
+		     webLib.implicitlywait(driver);
+		     webLib.maximizeScreen(driver);
 	   }
 	   else if(Browser.equalsIgnoreCase("edge"))
 	   {
@@ -44,10 +49,10 @@ public class BaseClass
 		     File_Utility fileLib=new File_Utility();   
 		     String url = fileLib.getCommonData("URL");
 		     driver.get(url);
-	   }
-	   
+		     webLib.implicitlywait(driver);
+		     webLib.maximizeScreen(driver);
+	   }  
         sDriver=driver;
    }
-   
    
 }

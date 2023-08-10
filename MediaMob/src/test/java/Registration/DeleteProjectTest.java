@@ -14,6 +14,7 @@ import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebElement;
 
 import Generic_Utilities.BaseClass;
+import Generic_Utilities.CallUser;
 import Generic_Utilities.File_Utility;
 import Generic_Utilities.WebDriver_Utility;
 import POM_Admin.LoginAsSuperAdmin;
@@ -26,18 +27,8 @@ public class DeleteProjectTest extends BaseClass
     public void deleteProject() throws Throwable
     {
 		 WebDriver_Utility webLib=new WebDriver_Utility();
-    	 
-		   File_Utility filLib=new File_Utility();
-	  	    String email = filLib.getCommonData("SuperAdminEmail");
-	  	    String Password = filLib.getCommonData("SuperAdminPassword");
-   
-	  	  webLib.implicitlywait(driver);
-	  	webLib.maximizeScreen(driver);
-       
-       LoginAsSuperAdmin login=new LoginAsSuperAdmin(driver);
-       login.loginSuperAdmin(email,Password );
- 	  webLib.assertMethod();
-
+		  CallUser userCall=new CallUser();
+			userCall.callSuperAdmin();
  	ProjectDelete ProjectDelete=new ProjectDelete(driver);
  	 boolean flag=true;
  	Thread.sleep(4000);

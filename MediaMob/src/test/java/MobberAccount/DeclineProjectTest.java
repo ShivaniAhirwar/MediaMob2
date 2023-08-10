@@ -17,6 +17,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import Generic_Utilities.BaseClass;
+import Generic_Utilities.CallUser;
 import Generic_Utilities.File_Utility;
 import Generic_Utilities.WebDriver_Utility;
 import POM_Mobber.LoginAsMobber;
@@ -27,17 +28,8 @@ public class DeclineProjectTest  extends BaseClass
      @Test
      public void delineProject() throws Throwable
      {
-    	 File_Utility filLib=new File_Utility();
- 	    String url = filLib.getCommonData("URL");
- 	    String email = filLib.getCommonData("Email");
- 	    String Password = filLib.getCommonData("Password");
-  	 driver.get(url);
-
- 	    WebDriver_Utility weblib=new WebDriver_Utility();
- 	    weblib.implicitlywait(driver);
- 	    weblib.maximizeScreen(driver);
- 	    LoginAsMobber mobber=new LoginAsMobber(driver);
- 	    mobber.loginasMobber(email, Password);
+    	 CallUser userCall=new CallUser();
+    		userCall.callMobber();
  	    Thread.sleep(3000);
  	    try
  	    {
@@ -49,8 +41,6 @@ public class DeclineProjectTest  extends BaseClass
  	    	System.out.println("Projects are assigned");
  	    List<WebElement> projectName = driver.findElements(By.xpath("//span[@class=\"ant-tag ant-tag-volcano offerTablesecond_offerwaringTagOutter__OyxaI\"]"
  	    		+ "/p[text()='In Progress']/ancestor::tr/td[2]/p[text()='"+DynamicXpathResource.DeclineProjectByMobber+"']"));
-// 	    JavascriptExecutor js=(JavascriptExecutor) driver;
-// 	    js.executeScript("arguments[0].scrollIntoView(true)", projectName);
  	    
  	    for(WebElement e:projectName)
  	    {
@@ -68,9 +58,8 @@ public class DeclineProjectTest  extends BaseClass
  	    }
  	    
  	    Thread.sleep(3000);
- 	   
-
  	    driver.findElement(By.xpath("//button[text()='Decline']")).click();
+ 	   Thread.sleep(3000);
  	    driver.findElement(By.xpath("//button[text()='Submit']")).click();
  	    }
  	    

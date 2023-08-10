@@ -10,6 +10,6 @@ public class DynamicXpathResource
 	public static String Deleteproject="Sample Project";
 	public static String SubmitProject="Test project role mobber";
 	public static String DeclineProjectByMobber="Test project role mobber";
-	public static String date1="2023-08-09";
-	public static String date2="2023-08-12";
+	public static String date1="2023-08-10";
+	public static String date2="2023-08-20";
 }

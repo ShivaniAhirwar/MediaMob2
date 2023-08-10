@@ -20,6 +20,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Generic_Utilities.BaseClass;
+import Generic_Utilities.CallUser;
 import Generic_Utilities.File_Utility;
 import Generic_Utilities.WebDriver_Utility;
 import POM_Admin.EditProjectPage;
@@ -35,15 +36,8 @@ public class Edit_ProjectTest extends BaseClass
      {
 		 WebDriver_Utility webLib=new WebDriver_Utility();
     	 
-		   File_Utility filLib=new File_Utility();
-	  	    String email = filLib.getCommonData("SuperAdminEmail");
-	  	    String Password = filLib.getCommonData("SuperAdminPassword");
-   
-	  	  webLib.implicitlywait(driver);
-	  	webLib.maximizeScreen(driver);
-       
-       LoginAsSuperAdmin login=new LoginAsSuperAdmin(driver);
-       login.loginSuperAdmin(email,Password );
+		  CallUser userCall=new CallUser();
+			userCall.callSuperAdmin();
 	     
 	    SuperAdminDashBoard dashboard=new SuperAdminDashBoard(driver);
 	    dashboard.ClickEditIcon();

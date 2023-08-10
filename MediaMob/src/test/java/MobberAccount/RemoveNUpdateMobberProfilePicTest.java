@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import Generic_Utilities.BaseClass;
+import Generic_Utilities.CallUser;
 import Generic_Utilities.File_Utility;
 import Generic_Utilities.WebDriver_Utility;
 import POM_Mobber.LoginAsMobber;
@@ -19,15 +20,8 @@ public class RemoveNUpdateMobberProfilePicTest extends BaseClass
 	@Test(priority=1)
      public void UpdateProfilePic() throws Throwable
      {
-		  	 File_Utility filLib=new File_Utility();
-			    String email = filLib.getCommonData("Email");
-			    String Password = filLib.getCommonData("Password");
-			    WebDriver_Utility weblib=new WebDriver_Utility();
-			    weblib.implicitlywait(driver);
-			    weblib.maximizeScreen(driver);
-			   
-			    LoginAsMobber mobber=new LoginAsMobber(driver);
-			    mobber.loginasMobber(email, Password);
+		CallUser userCall=new CallUser();
+		userCall.callMobber();
 			    //Thread.sleep(3000);
 			    
 			   WebElement ele = driver.findElement(By.xpath("//div[@class=\"NavDropdown_nav-item__ZXtMO NavDropdown_hide__8Zpuv\"]/a[@id=\"Dropdown\"]"));
@@ -65,15 +59,8 @@ public class RemoveNUpdateMobberProfilePicTest extends BaseClass
 	public static void removeProfile() throws Throwable
 	{
 		
-		File_Utility filLib=new File_Utility();
-	    String email = filLib.getCommonData("Email");
-	    String Password = filLib.getCommonData("Password");
-	    WebDriver_Utility weblib=new WebDriver_Utility();
-	    weblib.implicitlywait(driver);
-	    weblib.maximizeScreen(driver);
-	   
-	    LoginAsMobber mobber=new LoginAsMobber(driver);
-	    mobber.loginasMobber(email, Password);
+		CallUser userCall=new CallUser();
+		userCall.callMobber();
 	    //Thread.sleep(3000);
 	    
 	   WebElement ele = driver.findElement(By.xpath("//div[@class=\"NavDropdown_nav-item__ZXtMO NavDropdown_hide__8Zpuv\"]/a[@id=\"Dropdown\"]"));

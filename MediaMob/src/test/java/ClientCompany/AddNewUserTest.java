@@ -21,6 +21,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import Generic_Utilities.BaseClass;
+import Generic_Utilities.CallUser;
 import Generic_Utilities.Excel_Utility;
 import Generic_Utilities.File_Utility;
 import Generic_Utilities.Java_Utility;
@@ -40,14 +41,9 @@ public class AddNewUserTest extends BaseClass
 	   WebDriver_Utility webLib=new WebDriver_Utility();
 	   webLib.implicitlywait(driver);
 	   webLib.maximizeScreen(driver);
-  	 
-	   Excel_Utility excelLib=new Excel_Utility();
-	   File_Utility filLib=new File_Utility();
-  	    String email = filLib.getCommonData("SuperAdminEmail");
-  	    String Password = filLib.getCommonData("SuperAdminPassword");
-	   LoginAsSuperAdmin login=new LoginAsSuperAdmin(driver);
-	   login.loginSuperAdmin(email, Password);
-	   
+  	 Excel_Utility excelLib=new Excel_Utility();
+CallUser userCall=new CallUser();
+userCall.callSuperAdmin();
 	   SuperAdminDashBoard dash=new SuperAdminDashBoard(driver);
 	   dash.UserDropDown();
 	   dash.userListPage();
@@ -74,15 +70,15 @@ public class AddNewUserTest extends BaseClass
 	   companyName.click();
 	   Thread.sleep(5000);
 	   newUser.clickAddUserButton();
-	  
-//	   try {
-//		   button.deleteUser();
-//	   }
-//       catch(ElementClickInterceptedException e)
-//	   {
-//	   button.deleteUser();
-//	   }	   
-	 //  driver.findElement(By.xpath("//button[text()='Delete']")).click();
+	   Thread.sleep(2000);
+	   try {
+		   button.deleteUser();
+	   }
+       catch(ElementClickInterceptedException e)
+	   {
+	   button.deleteUser();
+  	   }	   
+	  // driver.findElement(By.xpath("//button[text()='Delete']")).click();
        Thread.sleep(3000);
 	   driver.quit();
    }
@@ -124,11 +120,15 @@ public class AddNewUserTest extends BaseClass
 		   companyName.click();
 		   Thread.sleep(5000);
 		   newUser.clickAddUserButton();
-		  
-		    webLib.assertMethod();
-		 	   
-	   //    driver.findElement(By.xpath("//button[text()='Delete']")).click();
-	       Thread.sleep(3000);
+	Thread.sleep(2000);
+		   try {
+			   button.deleteUser();
+		   }
+	       catch(ElementClickInterceptedException e)
+		   {
+		   button.deleteUser();
+	  	   }	
+		   
 		   driver.quit();
 		   
 		   

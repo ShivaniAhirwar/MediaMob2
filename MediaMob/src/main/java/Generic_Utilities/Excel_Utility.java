@@ -16,24 +16,12 @@ public class Excel_Utility
 	    	Workbook wb=  WorkbookFactory.create(fis);
 	    	Sheet sh = wb.getSheet(sheet);
 		 
-//	    	FileInputStream fis=new FileInputStream("./data/MediaMob.xlsx");
-//	    	Workbook wb=  WorkbookFactory.create(fis);
-//	    	Sheet sh = wb.getSheet(sheet);
+
 	  
 	    	Row row = sh.getRow(rowNum);
 			Cell cell = row.getCell(column);
 			String data = cell.getStringCellValue();
 			return data;
-	    	//String s="";
-	
-			
-//			for(int i=0;i<sh.getLastRowNum();i++)
-//			{
-//				
-//					 s = sh.getRow(i+1).getCell(0).getStringCellValue();
-//				
-//			}
-//			return s;
 	    }
 		
 			

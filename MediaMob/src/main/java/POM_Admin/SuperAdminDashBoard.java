@@ -34,7 +34,7 @@ public class SuperAdminDashBoard
     @FindBy(xpath="//p[text()='Users']")
     private WebElement userDropdown;
     
-    @FindBy(xpath="//span[@class=\"ant-menu-title-content\"]/child::a[text()='User Approvals']")
+    @FindBy(xpath="//child::a[text()='User Approvals']")
     private WebElement userApproval;
     
     @FindBy(xpath="//a[text()='User List']")

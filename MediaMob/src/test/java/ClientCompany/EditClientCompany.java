@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import Generic_Utilities.BaseClass;
+import Generic_Utilities.CallUser;
 import Generic_Utilities.File_Utility;
 import Generic_Utilities.WebDriver_Utility;
 import POM_Admin.LoginAsSuperAdmin;
@@ -14,17 +15,9 @@ public class EditClientCompany extends BaseClass{
 	@Test
 	public static void editCompany() throws Throwable
 	{
-		WebDriver_Utility webLib=new WebDriver_Utility();
-   	 
-		   File_Utility filLib=new File_Utility();
-	  	    String email = filLib.getCommonData("SuperAdminEmail");
-	  	    String Password = filLib.getCommonData("SuperAdminPassword");
-
-	  	  webLib.implicitlywait(driver);
-	  	webLib.maximizeScreen(driver);
     
-    LoginAsSuperAdmin login=new LoginAsSuperAdmin(driver);
-    login.loginSuperAdmin(email,Password );
+	CallUser userCall=new CallUser();
+	userCall.callSuperAdmin();
     SuperAdminDashBoard dash=new SuperAdminDashBoard(driver);
     dash.clickClientCompanyLink();
     Thread.sleep(3000);

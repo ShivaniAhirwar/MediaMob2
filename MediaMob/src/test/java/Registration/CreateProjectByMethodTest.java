@@ -16,6 +16,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import Generic_Utilities.BaseClass;
+import Generic_Utilities.CallUser;
 import Generic_Utilities.File_Utility;
 import Generic_Utilities.RetryAnalyser;
 import Generic_Utilities.WebDriver_Utility;
@@ -32,15 +33,8 @@ public class CreateProjectByMethodTest extends BaseClass
      {
     	 WebDriver_Utility webLib=new WebDriver_Utility();
     	 
-		   File_Utility filLib=new File_Utility();
-	  	    String email = filLib.getCommonData("SuperAdminEmail");
-	  	    String Password = filLib.getCommonData("SuperAdminPassword");
-   
-	  	  webLib.implicitlywait(driver);
-	  	webLib.maximizeScreen(driver);
-       
-       LoginAsSuperAdmin login=new LoginAsSuperAdmin(driver);
-       login.loginSuperAdmin(email,Password );  
+    	  CallUser userCall=new CallUser();
+			userCall.callSuperAdmin();  
 	      SuperAdminDashBoard dash=new SuperAdminDashBoard(driver);
 	      dash.createProjectButton();
 	      
@@ -106,7 +100,6 @@ public class CreateProjectByMethodTest extends BaseClass
        {
     	   projectPage.managerDropDOwn();
        }
-       
       Thread.sleep(3000);
       js.executeScript("arguments[0].click()",projectPage.saveButton );
       System.out.println("Created_Project_Name="+projectPage.createdProjectName.getText());
